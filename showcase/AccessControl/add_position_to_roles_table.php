@@ -29,7 +29,7 @@ return new class() extends Migration {
                 ->after('name')
                 ->comment('Group roles by application module');
 
-            // Notes Linking FK in anther file 2030_6_30_222926_create_foreign_keys_access_control
+            // Notes Linking FK in anther file create_foreign_keys_access_control
             $table->unsignedBigInteger('position_id')
                 ->nullable()
                 ->after('module')
