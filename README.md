@@ -82,3 +82,13 @@ Three-stage capture: `trying` → `success` / `failed`
 ### Position-Based RBAC
 
 - [Migration](./showcase/AccessControl/add_position_to_roles_table.php) — Auto-generated roles from positions
+
+## 📋 Architecture Decision Records (ADR)
+
+Key architectural decisions are documented in [`/docs/adr`](./docs/adr/)
+
+| #   | Decision                                                                                   | Status   |
+| --- | ------------------------------------------------------------------------------------------ | -------- |
+| 001 | [BlackBox Event-Driven Architecture](./docs/adr/001-blackbox-event-driven-architecture.md) | Accepted |
+| 002 | [Service Container in Traits](./docs/adr/002-service-container-in-traits.md)               | Accepted |
+| 003 | [BlackBox Table Partitioning](./docs/adr/003-blackbox-table-partitioning.md)               | Accepted |
