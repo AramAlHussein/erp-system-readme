@@ -57,3 +57,28 @@ A streamlined and effective module for managing the sales process.
 
 *   Manages customer data, currencies, and invoicing.
 *   Integrates seamlessly with the core RBAC system to ensure all sales operations are monitored, controlled, and documented.
+
+## 🔬 Architecture Showcase
+
+Selected code samples demonstrating key architectural decisions.
+
+### 1. BlackBox Audit System
+Every operation in the system is logged in three stages:
+- **Trying** → before execution
+- **Success** → after completion  
+- **Failed** → on error, with full exception snapshot
+
+Implementation via a reusable Trait + Event-driven architecture:
+
+[HandlesWarehouseBlackBox.php](./showcase/BlackBox/HandlesWarehouseBlackBox.php)
+
+### 2. Service Layer Pattern
+Clean separation between Repository and Service layers,
+with Interface contracts enforcing dependency inversion:
+
+[ItemService.php](./showcase/Item/ItemService.php)
+
+### 3. Position-Based RBAC Migration
+Roles auto-generated from positions — no manual role management:
+
+[Migration Sample](./showcase/AccessControl/add_position_to_roles_table.php)
